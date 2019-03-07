@@ -1,0 +1,45 @@
+<idea-plugin version="1" url="https://www.derbysoft.com">
+  <name>Equals and HashCode Nuke IDEA Generator</name>
+  <description>
+    <![CDATA[
+      Generates Nuke equals() , hashCode() and toString()
+      Usage:
+      <ul>
+          <li>ALT + INSERT -> equals() , hashCode() and toString().</li>
+      </ul>
+      ]]>
+  </description>
+  <version>1.0.1</version>
+  <change-notes>
+    <![CDATA[
+           version 1.0.1
+           <br/>
+           <ul>
+           </ul>
+         ]]>
+  </change-notes>
+  <vendor email=" hale.fu@derbysoft.com">
+  </vendor>
+  <idea-version since-build="143"/>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <actions>
+    <action id="GenerateToString"
+            class="nuke.idea.plugins.actionToString.GenerateToStringAction"
+            text="Nuke toString()" description="Generate toString methods">
+      <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup1"/>
+    </action>
+    <action id="GenerateEqualsHashCode"
+            class="nuke.idea.plugins.action.GenerateEqualsHashCodeAction"
+            text="Nuke equals() and hashCode()" description="Generate equals() and hashCode() methods">
+      <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup1"/>
+    </action>
+  </actions>
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+</idea-plugin>
