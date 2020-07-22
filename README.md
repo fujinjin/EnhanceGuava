@@ -1,1 +1,1 @@
-test
+My first Intellij IDEA plugins
